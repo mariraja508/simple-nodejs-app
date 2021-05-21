@@ -12,8 +12,9 @@ mongoose.connect(mongodb)
 
 
 const app = express();
-app.get('/',(req,res)=>res.send('Hello world Steffy ann john'));
 app.use(cors())
+app.get('/',(req,res)=>res.send({name : 'Mariraja'}));
+
 const port = process.env.PORT || 4000;
 
 app.listen(port,()=>console.log("App listening at port:",port))
